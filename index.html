@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <meta name="description"
+    content="" />
+  <link rel="icon" href="" type="image/x-icon">
+  <title>Портфолио</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://www.unpkg.com/fullpage.js/dist/fullpage.min.css">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+  <div class="site-container">
+    <header>
+      <div id="letterAnchor" class="letter-placeholder"></div>
+      <div class="logo-area">
+        <div class="gradient-text" id="gradientText">
+          <span class="a-placeholder" id="aPlaceholder"></span>
+          <span class="orlov-letters" id="orlovContainer"></span>
+        </div>
+        <div class="header-line" id="headerLine"></div>
+      </div>
+      <div class="header__menu">
+        <ul class="header__list">
+          <li class="header__item">Обо мне</li>
+          <li class="header__item">Навыки</li>
+          <li class="header__item">Работы</li>
+          <li class="header__item">Контакты</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="scroll-indicator" id="scrollIndicator">
+        <div class="site-content__title">Добро пожаловать</div>
+        <svg class="arrow-down" width="40" height="150" viewBox="0 0 40 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line class="arrow-line" x1="20" y1="0" x2="20" y2="230" stroke="#fff" stroke-width="2"/>
+          <polygon class="arrow-head" points="20,240 12,225 28,225" fill="#fff"/>
+        </svg>
+      </div>
+
+      <div class="site-content" id="siteContent">
+
+        <div class="site-content__first">
+          <div class="site-content__name">Меня зовут <b>Артур</b></div>
+          <div class="site-content__page">и я</div>
+          <div class="site-content__name"><b>Фронтенд-разработчик</b></div>
+          <div class="slide-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12L12 19L19 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="site-content__second">
+          <div class="site-content__name"><b>ты</b> попал</div>
+          <div class="site-content__portfolio">на страницу</div>
+          <div class="site-content__name">моего <b>портфолио</b></div>
+          <div class="slide-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12L12 19L19 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="site-content__third">
+          <div class="site-content__name">Поехали!</div>
+          <div class="buttons">
+              <button class="blob-btn" id="waveBtn">
+                  click
+                  <span class="blob-btn__inner">
+                      <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                      </span>
+                  </span>
+              </button>
+          </div>
+          <div class="wave-from-corner" id="wave1"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute; width: 0; height: 0;">
+              <defs>
+                  <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="goo"></feColorMatrix>
+                      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                  </filter>
+              </defs>
+          </svg>
+        </div>
+
+      </div>
+
+      <div class="main-content" id="fullpage">
+
+        <div class="section about">
+          <div class="about__container">
+            <div class="about__foto">
+              <div class="about__grey-block"></div>
+              <div class="about__second-grey-block"></div>
+              <div class="about__pic">
+                <img class="about__img" src="./image/me.jpeg" alt="foto">
+              </div>
+            </div>
+            <div class="about__info">
+              <div class="about__title">Приятно познакомиться</div>
+              <div class="about__text">Меня зовут Артур, я фронтенд-разработчик с 5-летним опытом в веб-разработке, 3 из которых — коммерческие проекты в диджитал агентстве.</div>
+              <div class="about__text"><b>Мой основной стек и инструменты:</b></div>
+              <ul class="about__list">
+                <li class="about__item"><span class="about__item-blue">Базовые технологии:</span> HTML, CSS, JavaScript, TypeScript;</li>
+                <li class="about__item"><span class="about__item-blue">Фреймворки:</span> Vue 3 (Composition API, Pinia, Vue Router);</li>
+                <li class="about__item"><span class="about__item-blue">Сборка проектов:</span> настраиваю сборщики Gulp и Webpack под любые задачи — от лендинга до крупного SPA;</li>
+                <li class="about__item"><span class="about__item-blue">Работа с бэкендом:</span> легко нахожу общий язык с серверной частью, интегрирую фронт с REST API, обрабатываю запросы и состояния загрузки;</li>
+                <li class="about__item"><span class="about__item-blue">Корпоративные решения:</span> имею опыт работы с «1С-Битрикс» — адаптирую компоненты и вёрстку под шаблоны порталов.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section skills">
+          <div class="skills__container">
+            <div class="section__title">Стек и инструменты</div>
+            <div class="skills__content">
+              <svg id="JS"           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347 392" class="reduced-2"><path fill-rule="evenodd" d="m315 353-143 39-141-40L0 0h347l-32 353ZM163 69H64l4 44h49v148l-24-4-2-35-45 1 7 68 110 21V69Zm22 0v130h59l-4 57-9 2-46 9v45l95-21 12-136h-61v-42h65l4-44H185Z"/></svg>
+              <svg id="node"         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1089.5 440.5" class="reduced-2"><path stroke="#000" d="M946 312v-24l22-12 21 12v24l-22 12-21-12Zm70 11 1-54-50-28-51 30v59l50 29 63 38s-67 42-70 41l-114-66 2-141 121-73 120 69v53l-72 43Zm-199 46-124 69-123-69V231l124-68 51 28 3-189 69 42v325ZM694 242l-52 29v58l51 29 52-29v-58l-51-29ZM398 438l-123-69V231l124-68 123 68v138l-124 69Zm-217-62V266l-56-31-57 31v110L1 415V231l124-68 123 68v184l-67-39Z"/></svg>
+              <svg id="webpack"      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 258"  class="reduced-1"><path d="m197.8 171.3-.6-78.8 38.2-21.2v121.5l-37.6-21.5ZM123 44.4l.5-43.8L229 61.4l-37.5 22-68.5-39Zm-5 81.6L54 90l64-36 64 36-64 36ZM7.4 61.7 112.5 1l1 43.8-68.7 39-37.4-22Zm30.1 109.9L.1 193 .2 71.3l37.9 21.5-.6 78.8Zm11-73.8 64 36.2v67.2l-64-33.7V97.8Zm63.7 116.9L112 258 6.7 200.4l37.8-22 67.7 36.3ZM187 98v69l-64 34v-67l64-36Zm41.5 102L123 257.9l-.4-43.8 69-35.8 36.9 21.7Z"/></svg>
+              <svg id="sass"         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 601.5 453.5"><path stroke="#000" d="M263 2c50-1 91 11 109 43 29 54-33 119-63 136-31 20-165 53-171-11 3-2 2-2 5-2 44 64 169-17 189-49 12-18 22-52 1-67-21-17-69-17-101-9-60 15-125 47-160 89-11 14-32 34-28 62 8 42 67 83 95 104l59-32c13-8 21-22 34-31 13-7 31-8 38 5 3 7 1 20 1 28 4-3 7-3 13-3l7 5c-2 28-23 55-16 84l4-2 34-74 27-67c10-3 23-4 33-2l1 2c-2 32-13 39 3 72l1-2c12-30 32-51 42-87 10-4 26-6 35 0-8 36-5 50 7 78 41-12 83-18 117 9 29 23 27 66-7 82h-5c4-11 19-15 21-30 2-9-4-18-8-24-19-29-69-34-110-22l-1 2c23 37-23 69-55 71l-8-4c-8-33 18-51 32-67-5-17-12-29-16-49l-1 2c-7 21-23 42-36 58 14 31 5 60-21 71-15 7-39 16-49-1 5-16 32-48 45-59-7-17-14-33-19-54h-1v2l-13 34-36 68c-6 10-14 31-28 26-20-3-11-27-16-43v2c-14 20-12 49-44 50-27-17-33-64-18-100l-2-2c-10 6-25 12-33 21 27 55-11 111-50 127-15 7-47 16-65 5-16-12-18-42-10-64 14-31 60-61 93-72l-1-4-57-41c-16-11-32-22-43-37-26-38-15-71 8-104 39-51 99-84 164-108l53-13 21-2Zm-15 250c-21 15-59 72-36 108 12-2 49-90 42-108h-6Zm198 48c-9 12-21 21-22 41h4c9-7 31-23 18-41Zm-316 22c-24 23-84 40-72 90 30 22 67-22 75-45 3-11 6-38-3-45Zm237 4-28 35h2c10-5 32-18 26-35Z"/></svg>
+              <svg id="babel"        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000.5 387.5" class="reduced-2"><path stroke="#000" d="M870 2c6-1 17-2 20 2l-15 1-1 1 1 4c9-1 9-1 13 1v12c4 0 2-2 4 1l-2 7-3-7-2 2-3 13c10 2-4 34-8 44-10 31-26 68-39 90-4 9-4 25-6 28 0 0-5 1-7 5-1 3 1 4 2 5-2 5-2 4-7 6v7h2c9 6 33 0 46-1l103-13v1h-1c-10 10-37 6-50 9v3l21-3-1 3-10 1 2 2c5 1 16-1 19-3-5-1-5 0-8-4 17 3 30 3 44-1v5h-17v4l15-3 2 3c-11 19-57 6-79 16v1l27-1v1c-22 1-54 14-75 8l16-2c0-3-1-2 1-3l10-3c-18-5-70 7-95 5v-1l5-15-5-1-7 8v-4l5-9h3l5 4c-1-24 13-39 19-59 1-4-2-9-2-12l35-81c4-11 17-55 20-52h3l3-8c-5 0-25 0-31 5l8 2-1 2-35 6v1l3 1h12c-39 5-102 4-112 38h-2l2-6c-11 7-22 33-25 48v1l97-2v2c-5 0-5-1-7 3l8 1-20 4v1c8 1 10 4 14 8h-2c-32 17-81 3-108 21-10 24-26 47-30 73 28 0 101-13 123-5h-2c-9 4-28 4-43 10v2c14-1 53-8 62-3-4 2-4 3-5 8-22 0-28 8-47 12-28 4-78-1-103 10l-20 45-2-2v-1l17-35-7-4c0 7-3 10-7 13l2-13-18-4-2-3 3-6-8-4 2-4 13-8 17-42 41-89c4-7 30-52 14-52l3-4c8-2 18-11 20-21l-5-1c-4 2-3 2-5 0 22-13 64-14 92-16l-7-1h20l-10-1c19 0 71 0 88-7Zm-110 8h2-2Zm-548 1c47 0 105 15 95 67-2 11-4 21-10 30l-50 43c3 13 17 21 24 33 13-1 35-1 43-9-3-2-1 0-2-3 45-10 97-117 132-149 1 8 5 8 8 13l-10 56c9-4 32-13 35-26h-6c19-32 151-61 173-10 17 42-48 71-45 78l18 21c7 19-20 44-28 51-23 18-50 43-77 54-25 8-47 10-70 22-10 5-10 23-23 27 4-9 10-14 10-26-7 1-9 0-17 3v-2c34-67 77-144 98-216h-1c-14 5-56 24-62 32l-3-1 3-5-5 5-13 55 7 1-5 4c-2 7-8 9-10 17-13 43-24 84-39 125l-20 54-3-1c0-23 15-49 20-73h-2l-1 1-25 74-12 4v-2l37-127c4-15 12-30 13-51-79 8-85 92-133 131l3-7-7-1-5 8-1-12-4 2c8-36 50-62 55-96h-8l-23 5c-11 32-90 92-127 99v3h2l6-3v3c-35 13-71 30-108 38-5 11-15 31-27 35 4-12 12-19 12-34l-2-1-20 4v-2l36-68 81-180 5-26c2-5 5-5 7-12h-2c-21 9-39 19-56 32-4-2-4-4-9-3l-18 14-2-4c3-1 2 0 4-5h-1l-9 7c1-6 4-8 8-12 4-1 6-2 12-1l-4-6c8 0 30-14 34-24l-10 1 1-4c19-6 32-21 50-29l53-15 30-6Zm673 3c-8 6-10 10-15 22 2 0 3 2 4 3l4-3c2-5 12-20 7-22Zm-121 5v4l10-2-10-2Zm-9 2-13 2v1h17v-2l-4-1Zm5 0-1 2c4-1 3 0 5-2h-4Zm-508 6 37 16v-4l-3-5-34-7Zm430 0h2v1l-2 2v-3Zm23 0-1 3 3 2 5-4-2-1h-5Zm77 5h7-7Zm17 3-17 1v3l28-3-11-1Zm-35 1h5-5Zm123 0v3-3Zm-283 3 28 10v-2l-3-4c-8-3-14-4-25-4Zm165 1a16841 16841 0 0 1 0 0Zm93 0-2 1v3h3l1-4h-2Zm-107 3-1 1h10v-1h-9Zm105 4-8 22 2 1v-2c4-4 10-15 6-21Zm-666 2c-6 2-13 2-15 7l-13 32c-10 22-27 45-29 72l1 2c15-1 26-10 38-15 39-16 67-32 85-69 3 2 1 2 6 1 2-5 4-8 2-15-3-5-5-8-12-8v5c-13-19-42-11-63-12Zm321 90c29 0 92-38 94-64 4 3 1 3 5 2 2-4 3-7 1-11l-6-8-2 3c0 2 0 0-2 3-5-16-49-10-58-6-8 28-30 50-32 81ZM286 55c1 6 3 10 8 14-1-7-3-12-8-14Zm341 3Zm225 12c-1 3-3 5-3 8h3v-8ZM710 82c1 3 3 2-1 5l1-5Zm-198 5c0 3-2 5-3 8h1v-3c3-2 3-1 2-5Zm-63 3c4 2 2 2 5 0h-5Zm-316 2-4 10h2v-2l3-5-1-3Zm-79 3h-3v3l5-3h-2Zm448 13v3h2c-1-4 1-2-2-3Zm-96 4-29 39 2 3h3l17-5c5-10 9-23 10-37h-3Zm93 1v6l3-2c-1-3 0-2-3-4Zm-378 6 1 5h1v-5h-2Zm376 5c-1 1-3 2-3 4h3v-4Zm-380 4-3 5 4 1v-2l1-2-2-2Zm375 4v6l2-1c-1-5 0-3-2-5Zm100 4v2c4 1 4 2 7 0l-7-2Zm-480 5-3 5 4-1 1-3-2-1Zm400 5h-2l2 3h2l1-3h-3Zm-406 5 1 7h1v-7h-2Zm288 0c-8 4-17 4-22 9l2-1c5 0 19-2 23-6l-3-2Zm181 2 7 5 2-2v-1l-2-1-7-1Zm-338 2v4l7 4 2-4h-2l-7-4Zm372 0 1 13h2l2-4-2-8-3-1Zm-60 1c-15 10-36 11-53 17l-39 80c33-4 126-60 125-90-9-4-18-7-33-7Zm-27 6-3 1c4 0 3 1 5-1h-2Zm-390 7v3h5v-3h-5Zm189 3-4 3h2l3-2v-1h-1Zm63 1-7 6 12-4v-2h-5Zm-92 4h2l-2 3v-3Zm77 0c-3 2-18 5-17 8h2l18-5-1-3h-2Zm-152 2c2 3 4 5 9 6-2-6-3-6-9-6Zm-25 4c-27 10-53 12-80 23L61 311h5c50-18 92-46 131-76 10-9 37-26 25-46-8-3-16-6-30-6Zm69 0v5l3-3-2-2h-1Zm538 6h3l-3 1v-1Zm-656 1c2 3 1 2 4 2l-4-2Zm119 0v3l4-3h-4Zm15 8-8 3v1l12-4h-4Zm12 3v2l5-1-5-1Zm-12 1-8 5 15-4v-1h-7Zm550 1h2l-4 7 2-7Zm-203 4-2 4h2l1-1-1-3Zm-5 6-5 15h5l3-15h-3Zm378 7h2-2Zm-536 3-4 8h2v-1c2-3 3-5 2-7Zm456 0c2 4 0 3 5 4l-2-3-3-1Zm-13 1-2 2v1h5l-2-3h-1Zm8 0c3 3 1 3 3 0h-3Zm-368 3c-10 7-54 33-65 33 0-2 2-3 3-4 3-1 2 0 4-3l-19 8v1l5 2c-7 1-20 2-25 5l-1 4c1 3-1 1 1 2 10 3 96-40 98-48h-1Zm348 0-25 4 28-3-3-1Zm5 0h2-2Zm-443 8v2l3-2h-3Zm508 1c0 2-5 5-10 3l10-3Zm7 0h3-3Zm-22 4h2-2Zm-12 0h3v1c-3 1 0 1-3-1Zm-143 4 2 3c-1-4 1-2-2-3Zm-293 1-2 4 5-1v-3h-3Zm151 2-3 1v2h10c4-1 7 0 12-2l-19-1Zm218 1h2-2Zm-379 2-2 2v1h2l5-1v-2h-5Zm30 2h-2v1c3 0 2 1 3-1h-1Zm308 1 12 1c-8 1-24 5-29 0l17-1Zm-375 8c3 2 3 1 5 0h-5Zm-388 9-3 12h1c3-2 5-9 2-12Zm362 11c5 0 6 0 10-2l1-8c-7 3-6 5-11 4v6Zm-252-6c-15 14-62 41-85 45l3-4 9-4h-3c-8 3-20 5-24 12h8v1l-33 4-5 10c3 1 5 3 8 3 28-16 111-42 125-65v-2h-3ZM57 286v5h2v-5h-2Zm60 14c-5 5-12 6-16 9v2l18-8-2-3Zm124 3 1 1-1-1Zm5 15h1v2l-1 1h-2l2-3Zm-188 2-4 2v2l7-4h-3Zm-27 14-7 8-5-3-1 3 1 4c6 2 8 2 12-1l3-10-3-1Zm316 13v4h4l-2-4h-2Z"/></svg>
+              <svg id="google_fonts" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.5 235.5" class="reduced-3"><path stroke="#000" d="M233 103c-36 0-64 30-64 66 0 33 24 61 57 65h-83v-53l-32 53H2L143 2h83a51 51 0 0 0 7 101V2c28 0 52 23 52 51s-24 50-52 50Zm0 0a65 65 0 0 1 0 131V103ZM49 92a45 45 0 1 1 0-91 45 45 0 0 1 0 91Z"/></svg>
+              <svg id="axios"        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 28" class="reduced-5"><path d="m93.3 3.7-7 5.6H91v18.4l2.4-2v-22ZM95.3 24.1l7-5.8h-4.6V.3L95.3 2v22.1ZM182.7 7c.8.4 1.4.7 1.7 1l2.5-4.7c-1.2-.8-2.7-1.5-4.5-2.1a16.8 16.8 0 0 0-11 0 8.9 8.9 0 0 0-3.8 2.9 7.6 7.6 0 0 0-1.4 4.6 6 6 0 0 0 2 4.8c1.3 1.1 3.4 2 6.1 2.7l5.4 1.6c1.3.4 2 1.2 2 2.3 0 1.5-1.4 2.3-4.4 2.3a16 16 0 0 1-9.7-3.2l-2.6 5a23.6 23.6 0 0 0 12.2 3.4c2 0 3.7-.2 5.3-.7 1.6-.6 3-1.4 4-2.6 1-1.2 1.5-2.8 1.5-4.8 0-1.7-.4-3-1.2-4-.7-1-1.8-1.8-3.2-2.4-1.4-.6-3-1.2-4.9-1.6a45 45 0 0 1-4.9-1.4c-1-.4-1.6-1.1-1.6-2.1 0-1.7 1.5-2.6 4.5-2.6 1.1 0 2.2.2 3.3.5 1 .3 2 .6 2.7 1Z"/><path d="M132.2 27.5c-2.1 0-4-.4-5.8-1.1a14.2 14.2 0 0 1-7.3-7.5 13.1 13.1 0 0 1 3-14.4A14.1 14.1 0 0 1 132.3.3a13.6 13.6 0 0 1 10.2 4.3 13.6 13.6 0 0 1 3.8 9.4c0 1.8-.3 3.5-1 5.1a14.1 14.1 0 0 1-13.1 8.4Zm-8.3-13.6a9 9 0 0 0 1 4.1 8.3 8.3 0 0 0 2.9 3.2 8 8 0 0 0 4.4 1.2 7.7 7.7 0 0 0 7.3-4.5 8.7 8.7 0 0 0 0-8.1 7.8 7.8 0 0 0-3-3 7.8 7.8 0 0 0-4.3-1.3 8 8 0 0 0-4.5 1.3A8.8 8.8 0 0 0 124 14ZM0 27.3 11.7.5h4.8L28 27.3H22L19.3 21H8.9l-2.7 6.3H0ZM14.1 7.5l-4 8.5H18l-3.8-8.5Z" clip-rule="evenodd"/><path d="m50.8.5 7.4 9.5L65.6.5H72L61.3 14l10.3 13.2h-6.3l-7-9.1-7 9.1h-6.5l10.3-13.2L44.5.5h6.3Z"/></svg>
+              <svg id="fontawesome"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 509" class="reduced-3"><path d="M366 418c-73-13-131-47-218-28v-71c2 0 2-1 3-2 29-3 56-12 88-5l107 33c34 8 67-5 93-7V117c-21 3-47 15-73 10-49-9-85-27-129-36-69-15-109 22-159 31v348a39 39 0 0 1-43 39h-2c-19-3-33-19-33-39V39C0 17 17 0 39 0h5l2 1a39 39 0 0 1 16 7c10 7 16 18 16 31v10l3 3 41-13c100-39 135-3 224 16 71 15 115-26 166-34v370c-43 10-89 37-146 27Z"/></svg>
+              <svg id="react"        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747 665"><path d="M747 329c0 51-62 97-157 125 25 98 17 176-28 202s-117-6-189-77c-73 71-144 103-189 77s-52-104-28-202C62 426 0 381 1 330c-1-52 62-97 158-125-23-95-15-170 30-196 44-25 113 5 184 72 70-67 140-98 184-72 44 25 53 100 30 195 97 28 160 73 160 125ZM541 622c33-19 36-80 14-159-30 6-62 12-97 15-20 28-40 54-61 77 58 58 112 85 144 67ZM222 285a922 922 0 0 1 37-63c-20 2-39 6-57 9l20 54Zm-21 144 60 10-18-30-20-37c-9 19-16 39-22 57Zm42-100c9 21 20 42 31 62l33 52a954 954 0 0 0 131 0l34-53 32-61a852 852 0 0 0-65-112 979 979 0 0 0-132 1 805 805 0 0 0-64 111Zm264-73 16 29c9-19 15-37 21-54l-58-10 21 35Zm16 115a1063 1063 0 0 1-39 68l61-9c-6-20-13-39-22-59ZM412 481l-39 2-39-2 39 49 39-49ZM205 622c32 18 86-9 144-67-21-23-42-49-62-77-34-3-67-9-97-15-20 79-18 140 15 159Zm-36-383c-79 22-128 54-129 91 1 37 49 69 125 90 10-29 22-61 36-92-13-31-24-60-32-89Zm39-195c-32 18-36 76-16 152 29-6 61-11 95-15 20-27 40-52 61-74-57-55-109-81-140-63Zm128 134 38-1 36 1c-12-16-24-32-37-45-13 14-25 29-37 45ZM538 44c-32-19-84 7-140 62 20 22 41 47 61 75 33 4 65 8 95 15 19-76 15-134-16-152Zm40 195c-9 29-20 58-34 88 15 32 27 64 37 94 77-22 126-54 126-91s-51-70-129-91Zm-205 22a68 68 0 1 1 1 137 68 68 0 0 1-1-137Z"/></svg>
+              <svg id="angular"      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167 180"> <path d="m155 140-72 40-71-40L0 30 83 0l84 30-12 110ZM84 20 31 137h20l11-26h44l11 26h19L84 20Zm0 37 15 37H69l15-37Z"/></svg>
+              <svg id="vue"          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 899 778" class="reduced-2"><path d="M450 778 0 0h171l279 482L728 0h171L450 778ZM178 0h168l104 180L554 0h167L450 470 178 0Z"/></svg>
+              <svg id="postcss"      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508.4 506.4" class="reduced-1"><path stroke="#000" stroke-width=".3" d="M143 326h2c0 4-1 19 1 21l1-1c-2-4 1-25 0-28l-2-2c0 1 0 2-1 1v-23c1-6 5-24 2-31v1l-2 18s1 0 0 0c0-9-3-14-1-21 0-2 2-2 2-3 2-2 2-29 2-33v1c-3 6 1 28-3 32h-1v-33l4-63-1-1c-5 5-10 12-13 18-11 14-22 27-35 38-2 2-2 4-5 6l-2-1c3-3 5-4 6-8l-1 1-4 3h-1l4-6h2l-1-2 4-7h1v1l-3 4h1c3-2 7-7 7-11l1-4c1 0 2 0 3-2l10-14 31-47 62-83 19-27A208 208 0 0 0 45 140l-10 19c-7 15-14 32-18 50l-2 26-7 11 1 2H6l1 2c-3 1 2 14 4 14v-4h2l-1-3h1v-1l2 11h1c0-6-3-12 0-16v1l2 17 3 15h-1v-1l-3 1c5 1 2 5 1 6l2 1v-2c1 1 3 2 2 4h-1c-3 0-2-1-5-2l2 10h-1c-1-4-3-17-5-16h-1l1-3c-4-2-3-16-6-19 2-4-1-15-3-19l1-1c-2-4-4-27-2-36 4-31 12-50 23-74C55 76 100 33 166 12c15-5 31-5 47-8 15-1 29-3 45-3h18c17 3 35 2 51 6 43 11 78 31 108 54l11 14 19 24c9 12 17 24 23 40 4 9 9 19 12 29l5 32 1 23c1 11 2 22 1 33-3 20-2 41-8 59l-9 27c1 7 10 11 10 18-5 1-14 1-18 3l-7 14-15 25-16 21c-3 4-22 20-23 23-6 0-14 10-19 12v1l1 1c-2 2-5 2-8 3l-13 7v1h3-5c-1 4-6 4-9 5-6 2-12 8-20 7 0 2-1 3-3 4l-1-2 3-1v-1l-18 8 5-1-1 1-4 2v1l2 1-17 3 1-2h-1l1-1h-1l-4 2v1h2v1c-6 1-15 1-19 4-6-2-17 4-26 1-1 3-13 1-16 1v-1l1-1v-1h-25l-21-3c-15-4-30-7-45-13-17-6-38-18-53-28l-16-14c-3-2-4-6-7-7v2-3l-3 1-3-4-2-1-6-6v1l8 8h-2l-5-4v-2l-1 1c-2-5-8-7-10-12l2 1c0 2 2 4 5 4-2-7-9-10-13-16l-7-12v-1l2 1 1 3c7 0 6 6 11 8l1-1-16-24h1l3 4 1-1-3-5c7 4 12 15 17 21 4 5 14 11 19 16 2 6 10 8 15 11l13 12 12 6h3c6 4 13 11 20 13v-2c11 2 21 10 29 15h4l9 3h6l17 5c23 5 51 4 75 0l28-4 35-14 8-6 31-19 17-12 12-12 8-8c3-4 9-9 9-13l2-1-1-1h1v-1h-1 2l-1-3 4-3-1-1v-1l2-1c1-1 2-5 4-6v1l1-2-1-1c1-2 4-2 6-4h-2v-2l3-1-2-1 1-1 2-2c-20-1-44-2-64 1l-33 2-25 1a2668 2668 0 0 0-103 4l-73 3h-29a122060 122060 0 0 0-71 0c-8-2-28-6-34-4l1-2-4 1v-5c23-8 61-5 89-5l29-1c2-8 2-19 2-29Zm330-10h-1c-1-2 0-12 1-15l3 1-2-8 2 1v5l2-1c2-4 4-28 3-33l1-8v2l-3-4v-9l3 3 1-1v-5c-1-4-4-6 0-9v-1l-4 2v-8l1 1v-1h2v5c2-10 2-24 0-33h-2l-1-3c1-3 0-3-1-6v-6l-4-16c-3-11-5-25-10-34l-19-25-20-25-11-11-10-11c-7-6-17-10-25-14l-34-14c-23-9-54-14-84-15l20 25 40 54 18 25c4 6 8 14 13 18 4 3 14 2 21 2l-1 12c-3 21 13 32 20 44 19 32 41 60 60 91l20 30h1l-1-3h1l2 1v-13l-2 10ZM244 29c-11 15-22 29-32 45 1 0 0 0 0 0h2l-2 3s1 0 0 0l-1-2h-1c-1 2-5 5-4 7l3-2-7 8 1-2-11 13c3 3-9 13-11 14 0 5-4 7-6 10l-21 29c60 0 115-6 174-6v-1l-18-25-39-59-25-32h-2Zm-48 67h2l-1 1-3 3v-2l2-2Zm143 71h-50l1 1c4 4 11 5 16 8 10 5 18 11 25 19 5 6 11 15 14 23 1 2 4 13 6 14 0-14 1-29-1-42v-13c-1-3-6-10-11-10Zm-172 6-1 49c0-1 0-1 0 0l6-10 23-26 14-10 7-5-49 2Zm1 183 56-1v-1c-5-1-30-12-31-16 2 2 3 2 6 2l-8-9c-2 1-5-1-5-3l1 1-5-9h-1v1l5 7c-4-2-20-27-17-32h2c0 2 0 3 2 3l-3-11h1l2 8h1v-1c3 3 12 17 13 21l-1 4 1-1 3 3h1l-1-1-2-4 10 10c7 5 17 11 26 13 7 2 16 2 24 2 40 0 61-18 73-46 2-5 5-10 6-16v1l-2 2h-1c2-5 5-9 6-15v-8l3-16-2-9c-6-22-15-30-32-41-6-5-13-9-21-13-17-7-40 2-52 7-4 2-12 4-13 9l4-3 1 1-5 3h-1l1-3c-3 1-3 2-3 4-3 1-3 3-4 4l-10 6-10 13c1 3 0 5-1 6v1-6l-1 1c-1 5-5 8-6 13h-1c-1 5-5 9-4 11l2 2c-2 3-3 10-6 13l-1-1-2-1a102306 102306 0 0 0-1 47c3 15 3 31 3 48Zm80-174 1 2-6 1 5-3Zm123 93c0 7 1 10 3 16l-2-2v9l1-3 1 1c1 5 2 10 0 13l2 1v9c0 1 0 0 0 0l-1-5h-1c1 4 0 6-1 8l-2-2 1 30 1-1 2 1v-2c3 2 13 2 18 2 16-3 35-2 52-2 6 0 18 1 21-1 1-1 2-1 2-3-9-6-16-19-23-29-17-23-34-47-49-72l-15-20c-3-4-5-9-9-11a20181 20181 0 0 0 0 39l1 9h-1v-4h-1c0 7 0 15 3 19h-3ZM84 225l2 1-6 8-1-2 5-7Zm-11 9h1c-2 2-2 5-5 5 0 0 1 0 0 0l4-5Zm3 2h1l-3 5 1 2h1l2-3c-1 3-5 10-8 11v-1c2-1 4-4 4-7h-1l-7 11 1 1-8 8c-1 1-2-1-3-2h1c2-8 13-9 15-18l-1-1v1l-2 2v1-1l7-9Zm-8 10h1l-4 4v-1l3-3Zm304 15h1-1Zm-20 89c-1-19-4-37-4-58h-1c-1 5-3 8-5 11-8 16-14 24-27 34-6 5-12 12-21 14v1l58-2Zm20-56 2 1h1-2l-1-1Zm-349 2c2 1 2 3 2 5h-1s1 0 0 0c-1-2-2-4-1-5Zm-5 7 1 3v-1l-1-2Zm9 3c3 2 4 7 4 10h-1l-4-9 1-1Zm-3 7 1 3h-4v-2c1 1 3 1 3-1Zm348 17 3 3h-2l2 2h-3v-5ZM22 365l1 1h-1v-1Zm384 93h1l-1 1-3 2s0-1 0 0l3-3Zm-8 6h1v1l-6 2 5-3Zm-86 32-8 2v-1c4 1 8-1 10-1h-2Zm-10 2-33 4c6 0 14-2 18-1v1h-3 11l-4-2v-1c2 1 11 1 12-1h-1Zm-35 3-9 2 10-1-1-1Z"/></svg>
+              <svg id="docker"       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.4 186.4" class="reduced-2"><path stroke="#000" stroke-width=".3" d="M117 2c6 0 22-2 25 0v24c-6 0-22 1-26-1V3l1-1ZM54 31a26277 26277 0 0 0 25 1v22H53l1-23Zm32 0h25v1c1 2 0 21-1 22H85V31h1Zm31 0c6 0 22-2 25 0v23c-4 1-22 2-26 0V31h1Zm84 7c10 3 20 15 21 28 10 0 20 0 28 2l6 5c-4 17-20 24-39 25-15 37-36 64-73 78-33 13-90 13-116-6-16-12-23-34-27-59-1-7-1-18 3-21 4-2 9-1 14-1h131c16 0 36 1 47-5-10-16-5-34 5-46ZM24 59c6 0 21-1 25 2l-1 22H23v-1c-1-2-1-20 1-22v-1Zm31 0c6 0 21-1 25 2l-1 22c1 0 0 0 0 0H54V60l1-1Zm31 0c6 0 22-1 25 2v22H85v-1c-1-2-1-20 1-22v-1Zm32 0c5 0 20-1 24 1v23c-6 1-22 2-26 0-1-5-1-22 2-24Zm31 0c6 0 21-1 25 2v22h-26V60l1-1Z"/></svg>
+              <svg id="kubernetes"   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257 248"><path d="m253.3 165.9-61.6 75.5a17.3 17.3 0 0 1-13.4 6.5H79.6c-5.2.1-10.2-2.2-13.5-6.1l-61.5-76c-.3-1 .3-1.4-.7-1.8a16.4 16.4 0 0 1-2.6-13l21.9-95.3c1-5.1 4.6-9.4 9.4-11L121.5 2c4.4-1 8.8-3 14.9 0l88.8 42.8c4.7 1.7 8.1 6 9.1 11l22.3 95.2c1.1 5 0 11-3.3 15Zm-41.9-23.3c-3.6-.4-6.6-.8-9.5-1.9-2.5-1.4-.7-2-4.3-2.9a68.6 68.6 0 0 0-11.3-47.6l2.2-1.8c-1-4.2 9.6-8.8 13-11.3 3.7-1.2 4.8-6.2 2.6-8.7-4.7-4.7-9.5.5-12.7 4.4-3.4 2.8-6.2 7.6-10.2 6.5l-2.2 1.5a69.2 69.2 0 0 0-44-21.1v-2.5c-3.5-1.6-1.6-8-1.5-12.4.8-4.6 2.1-12-4.4-12.4-6.8 1.6-5.6 7.4-4.7 12.4l.7 9.8c-.4 1.1-1 2.2-1.8 2.6v2.5a71.7 71.7 0 0 0-44.4 21c-3.4-2-2.7-.2-5.1-1.4l-7.3-6.5c-2.2-2-5.2-6.2-8.4-6.2-7 .3-6.6 7.6-1.8 10.9a168 168 0 0 1 12.4 8c.7.7 1 3 1 3l1.9 1.7a65.8 65.8 0 0 0-11 47.6c-3.4.8-2.3 2-4.7 3.3-3.3.6-11.3 1.8-14.5 1.8-8.9 1.2-8 12 1 11v-.4H44l4.7-1.9c3.3-1.4 6.2-1.6 9.1-2.9l3.6 1.1 2-.3a69.7 69.7 0 0 0 30.5 38.1l-.1 2.6c-.3.7.1 1.8-.3 3.5l-4.7 8c-.4 1-3.3 4.5-3.1 5.5-2 3-1 6.6 1.6 7.7 6.1 2.9 8.3-4.6 10.5-9.1.5-3.6 1.6-7.3 4-9.8l1.6-1.1 1-2.2a72.5 72.5 0 0 0 49.2 1l1.5 1.2c.7.3 1.8.7 2.5 1.8l3.7 8.7c1.2 5 3.8 11.6 9.4 9.5 3-1.5 3.7-4.8 2.6-7.7-.4-1-3-4.8-3.7-5.8-2.1-3.1-6-7.6-4.3-11.2l-.8-2.2a70.8 70.8 0 0 0 30.8-38.5l2 .3c2.5-2.9 8.4.7 12.4 1.5 4.5 1.9 10.8 4.6 13-1.5 1-6.9-6.3-7-11.2-7.2Zm-54.2-16.4c-3.5-1-4.5-5.6-1.9-8h-.3l21.8-18.9a69 69 0 0 1 8.1 34.5l-27.7-7.6Zm-21.5-52.7c12 1.8 23.3 7.3 32 15.6-34 23.8-29.9 25.7-32-15.6Zm1 61-7.6 3.7-7.6-3.6-2.2-8.4 5.4-6.5h8.4l5.5 6.5-1.8 8.4ZM90.3 89.2a58 58 0 0 1 32-15.6c-1.9 42.3 2 39.3-32 15.6Zm-16 45.1a54.5 54.5 0 0 1 7.6-34.9c30.6 27.5 32.5 23.1-7.7 34.9Zm31.2 8.4c3.4-.1 5.7 4.2 4.4 7.4l-10.5 24.9a54 54 0 0 1-21.8-28l27.2-4.3h.7Zm23.3 11.2c1.5-.5 3.9 1 4.4 2.3l13.9 24.6a56.2 56.2 0 0 1-35.7-.3l13.4-24.3c1.1-1.6 2.6-2.3 4-2.3Zm23.8-11.6h.6l28 4.7a56.5 56.5 0 0 1-22.1 28l-10.5-26.2c-1.7-2.9.4-6.3 4-6.5Z"/></svg>
+              <svg id="github"       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2350 2315"><path d="M1175 0a1175 1175 0 0 0-285 2315c-6-15-9-36-9-56v-200H734c-79 0-152-35-185-100-38-70-44-179-141-247-29-23-6-47 27-44 61 18 111 59 158 121 47 61 68 76 156 76 41 0 106-3 165-12 32-82 88-155 155-191-393-47-581-241-581-505 0-115 50-223 132-317-27-91-62-279 12-353 176 0 282 115 308 144a905 905 0 0 1 570 0c26-29 132-144 308-144 71 71 38 262 9 353 82 91 129 202 129 317 0 264-185 458-575 499 108 56 185 215 185 332v268c0 9-3 18-3 26A1175 1175 0 0 0 1175 0z"/></svg>
+              <svg id="gitlab"       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 248"><path d="M250 149c-8 19-25 29-41 40l-31 24-47-36 71-55a160 160 0 0 1 49-23l4 11c3 13 0 29-5 39Zm-49-29-73 56-73-56A140 140 0 0 0 5 96l16-41 15-38c2-6 3-13 9-16 10-4 13 8 15 15l20 63h96l19-57c3-11 2-17 12-22 13 4 11 10 15 21l16 41 13 34-22 8-28 16ZM5 96c1 1 1 1 0 0Zm246 0c0 1 0 1 0 0ZM55 122l70 55-46 36-31-23c-16-12-34-22-41-41a62 62 0 0 1-2-50 137 137 0 0 1 50 23Zm120 92-31 24c-4 3-8 8-14 9v1h-1c-3 0-5-1-8-4l-6-4-33-25 46-37 47 36Z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="section work">
+          <div class="work__container">
+            <div class="section__title">Работы</div>
+            <div class="work__content">
+              <div class="work__item">
+                <a class="work__link" target="_blank" href="https://arthurorlov.github.io/porsche/">
+                  <div class="work__bd"><img src="./image/porsche-pic.PNG" alt=""></div>
+                  <div class="work__name">Porsche</div>
+                  <div class="work__details">
+                    <div class="work__details-center">
+                      <h3>Porsche</h3>
+                      <p>Свежий взгляд на сайт немецкого автопроизводителя</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="work__item">
+                <a class="work__link" target="_blank" href="https://maestroclean.ru/">
+                  <div class="work__bd"><img src="./image/maestro.PNG" alt=""></div>
+                  <div class="work__name">Maestro</div>
+                  <div class="work__details">
+                    <div class="work__details-center">
+                      <h3>Maestro</h3>
+                      <p>Химчистка премиального уровня</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="work__item">
+                <a class="work__link" target="_blank" href="">
+                  <div class="work__bd"><img src="./image/funamo.png" alt=""></div>
+                  <div class="work__name">Funamo</div>
+                  <div class="work__details">
+                    <div class="work__details-center">
+                      <h3>Funamo</h3>
+                      <p>Магазин детских товаров</p>
+                    </div>
+                  </div>
+                  <div class="in-work">В разработке</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="work__more">И многое, многое другое...</div>
+
+          </div>
+        </div>
+
+        <div class="section contact">
+          <div class="contact__container">
+            <div class="section__title">Контакты</div>
+            <div class="contact__content">
+              <form id="tgForm" class="contact-form">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                  </div>
+                  <input type="text" id="name" placeholder=" " required>
+                  <label for="name">Ваше имя</label>
+                  <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <input type="email" id="email" placeholder=" " required>
+                  <label for="email">Email</label>
+                  <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="fa fa-comment"></i>
+                  </div>
+                  <textarea id="message" rows="3" placeholder=" " required></textarea>
+                  <label for="message">Сообщение</label>
+                  <span class="focus-border"></span>
+                </div>
+
+                <button type="submit" class="contact__btn">
+                  <span>Отправить</span>
+                  <i class="fa fa-paper-plane"></i>
+                </button>
+                <div id="formStatus" class="form-status"></div>
+              </form>
+            </div>
+            <div class="contact-social">
+              <div class="social-title">Связаться в один клик</div>
+              <div class="social-icons">
+                <a href="tel:+79166244557" class="social-icon" data-tooltip="Позвонить">
+                  <i class="fas fa-phone-alt"></i>
+                </a>
+                <a href="https://t.me/arthurorlov" target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="Telegram">
+                  <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://max.ru/u/f9LHodD0cOK2JTdT6P-o0nSstGgEt3nrel2GY0nJ2gOaxn0NdtDvs8UlXkU" target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="Max">
+                  <i class="fas fa-briefcase"></i>
+                </a>
+                <a href="https://github.com/ArthurOrlov" target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-icon" data-tooltip="HeadHunter">
+                  <i class="fas fa-headhunter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+        
+    <footer>
+    
+    </footer>
+
+  </div>
+
+  <div class="hero-animation" id="heroAnimation">
+    <div class="animated-container" id="animatedContainer">
+      <div class="big-a">A</div>
+      <canvas id="starCanvas" class="star-canvas"></canvas>
+    </div>
+  </div>
+
+  <script src="./js/contact.js"></script>
+  <script src="./js/index.js"></script>
+  <script type="text/javascript" src="https://www.unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+  
+</body>
+</html>
